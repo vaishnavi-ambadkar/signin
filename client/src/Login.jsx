@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+   axios.defaults.withCredentials = true;
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post("http://localhost:3001/login", { email, password })
+            .post('https://signinv-vaishnavi-ambadkars-projects.vercel.app/login', { email, password })
             .then((result) => {
                 if (result.data.message === "Success") {
                     alert("Login successful!"); // Success pop-up
