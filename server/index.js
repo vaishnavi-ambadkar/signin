@@ -88,6 +88,10 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 )
+  app.get("/",(req,res)=>
+    {
+      res.json("Hi");
+    })
   .then(() => {
     console.log("MongoDB connected successfully");
   })
