@@ -151,9 +151,9 @@ app.post("/signup", upload.single("file"), (req, res) => {
 //   console.log("Server is running on port 3001");
 // });
 // Remove or comment out this line:
-// app.listen(3001, () => {
-//   console.log("Server is running on port 3001");
-// });
+app.listen(3001, () => {
+  console.log("Server is running on port 3001");
+});
 
 // Add this line instead:
-module.exports = app;
+// module.exports = app;
