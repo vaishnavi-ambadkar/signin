@@ -54,9 +54,9 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://signinf-vaishnavi-ambadkars-projects.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
+  origin: [""],
+  methods: ["POST","GET"],
+  credentials: true
   }
 ));
 
@@ -87,11 +87,13 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
-)
-  app.get("/",(req,res)=>
-    {
-      res.json("Hi");
-    })
+);
+
+app.get("/",(req,res) => {
+  res.json("Hm");
+}
+  )
+  
   .then(() => {
     console.log("MongoDB connected successfully");
   })
@@ -147,13 +149,10 @@ app.post("/signup", upload.single("file"), (req, res) => {
 });
 
 // Start the server
-// app.listen(3001, () => {
-//   console.log("Server is running on port 3001");
-// });
-// Remove or comment out this line:
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
 });
 
-// Add this line instead:
-// module.exports = app;
+
+     
+ 
