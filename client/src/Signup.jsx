@@ -293,7 +293,7 @@ function Signup() {
 
         // Ensure the backend is listening on the correct endpoint and port
         axios
-            .post('https://signinv-vaishnavi-ambadkars-projects.vercel.app/login', formData, {
+            .post('https://signinv-vaishnavi-ambadkars-projects.vercel.app', formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             })
             .then((result) => {
