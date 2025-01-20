@@ -57,6 +57,7 @@ const corsConfig = {
   credential:true,
   methods:["GET","POST","PUT","DELETE"],
 };
+app.use((cors(corsConfig));
 // Cloudinary Configuration
 cloudinary.config({
   cloud_name: "dar0bjrax", // Replace with your Cloudinary cloud name
