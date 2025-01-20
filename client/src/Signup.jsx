@@ -238,6 +238,7 @@ function Signup() {
     const [file, setFile] = useState(null); // State for file upload
     const [loading, setLoading] = useState(false); // Loading state
     const navigate = useNavigate();
+    axios.defaults.withCredentials = true;
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -292,7 +293,7 @@ function Signup() {
 
         // Ensure the backend is listening on the correct endpoint and port
         axios
-            .post("http://localhost:3001/signup", formData, {
+            .post('https://signinv-vaishnavi-ambadkars-projects.vercel.app/login', formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             })
             .then((result) => {
