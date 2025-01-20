@@ -44,22 +44,19 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+// const cors = require("cors");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const EmployeeModel = require("./models/Employee");
 
 const app = express();
-app.use(express.json());
-app.use(cors(
-  {
-  origin: ['https://vercel.com/vaishnavi-ambadkars-projects/signin-zcz8'],
-  methods: ["POST","GET"],
-  credentials: true
-  }
-));
-
+const cors = require("cors");
+const corsConfig = {
+  origin:"*",
+  credential:true,
+  methods:["GET","POST","PUT","DELETE"],
+};
 // Cloudinary Configuration
 cloudinary.config({
   cloud_name: "dar0bjrax", // Replace with your Cloudinary cloud name
