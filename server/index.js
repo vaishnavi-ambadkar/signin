@@ -54,7 +54,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-  origin: [""],
+  origin: ['https://vercel.com/vaishnavi-ambadkars-projects/signin-zcz8'],
   methods: ["POST","GET"],
   credentials: true
   }
